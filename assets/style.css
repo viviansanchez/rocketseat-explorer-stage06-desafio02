@@ -1,0 +1,254 @@
+/* font-family: 'Roboto', sans-serif; this is for whole doc*/
+/* font-family: 'Roboto Mono', monospace; for background no favorites only */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff: "Roboto", sans-serif;
+  --ff-background: "Roboto Mono", monospace;
+  --background-font-color: #4e5455;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --body-bg-color: #000000;
+
+  --input-bg-color: #06181c;
+  --input-font-color: #7c7c8a;
+  --button-font-color: #ffffff;
+  --button-bg-color: #065e7c;
+  --button-hover-font-color: #065e7c;
+  --button-hover-bg-color: #ffffff;
+
+  --table-border-color: #4a808c;
+  --table-font-color: #e1e1e6;
+  --thead-bg-color: #043444;
+  --tr-border-color: #4a808c;
+  --tr-even-bg-color: rgba(6, 24, 28, 1);
+  --tr-odd-bg-color: rgba(6, 24, 28, 0.5);
+  --td-remove-font-color: #f75a68;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: var(--ff);
+  font-weight: var(--fw-regular);
+  background-color: var(--body-bg-color);
+  height: 100vh;
+}
+
+#app {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding-top: 7.188rem;
+
+  /* border: 1px solid red; */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  width: 12.125rem;
+  height: 2rem;
+
+  margin-top: 0.938rem;
+}
+
+header .input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  height: 3rem;
+}
+
+.input-wrapper input {
+  min-width: 28.875rem;
+  padding: 1rem;
+
+  background-color: var(--input-bg-color);
+  color: var(--input-font-color);
+  font-size: 1rem;
+
+  border: none;
+  border-radius: 5px;
+}
+
+::placeholder {
+  color: var(--input-font-color);
+  opacity: 1;
+
+  font-size: 1rem;
+}
+
+:-ms-input-placeholder {
+  color: var(--input-font-color);
+  font-size: 1rem;
+}
+
+.input-wrapper button {
+  background-color: var(--button-bg-color);
+  width: 10.625rem;
+  border-radius: 5px;
+
+  color: var(--button-font-color);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  transition: all 0.5s;
+}
+
+.input-wrapper button:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-font-color);
+}
+
+.input-wrapper button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.input-wrapper button svg path {
+  fill: var(--button-font-color);
+  transition: fill 0.5s;
+}
+
+.input-wrapper button:hover svg path {
+  fill: var(--button-hover-font-color);
+}
+
+main {
+  /* height: 39rem; */
+  max-height: 39rem;
+  margin-top: 5.438rem;
+  border: 1px solid var(--table-border-color);
+  border-radius: 0.75rem;
+}
+
+table {
+  color: var(--table-font-color);
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+table thead tr th {
+  background-color: var(--thead-bg-color);
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+}
+
+table thead tr th:first-child {
+  border-top-left-radius: 0.75rem;
+}
+
+table thead tr th:last-child {
+  border-top-right-radius: 0.75rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--tr-even-bg-color);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--tr-odd-bg-color);
+}
+
+tbody td {
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+}
+
+tbody .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+tbody .user img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+}
+
+tbody .user a {
+  text-decoration: transparent;
+  color: var(--table-font-color);
+
+  transition: text-decoration 0.5s;
+}
+
+tbody .user a:hover {
+  text-decoration: underline;
+}
+
+tbody .user a span {
+  font-weight: var(--fw-regular);
+}
+
+tbody .remove button {
+  color: var(--td-remove-font-color);
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+
+  transition: scale 0.5s;
+}
+
+tbody .remove button:hover {
+  scale: 1.05;
+}
+
+/* tbody tr:last-child {
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 0.75rem;
+} 
+this was supposed to add border radius to last row from tbody, not working atm*/
+
+/* no-favorites-screen */
+.no-favorites-screen-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.75rem;
+
+  padding: 13.125rem 0;
+}
+
+.no-favorites-screen img {
+  width: 8.25rem;
+  height: 7.813rem;
+}
+
+.no-favorites-screen span {
+  color: var(--background-font-color);
+  font-family: var(--ff-background);
+  font-weight: var(--fw-bold);
+  font-size: 2.5rem;
+}
