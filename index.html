@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitFav</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭐</text></svg>"
+    />
 
     <link rel="stylesheet" href="./assets/style.css" />
 
@@ -63,42 +67,10 @@
             </tr>
           </thead>
 
-          <tbody>
-            <tr>
-              <td class="user">
-                <img
-                  src="https://github.com/viviansanchez.png"
-                  alt="Imagem de viviansanchez"
-                />
-                <a href="https://github.com/viviansanchez" target="_blank">
-                  <p>Vivian Sanchez</p>
-                  <span>/viviansanchez</span>
-                </a>
-              </td>
-              <td class="repositories">44</td>
-              <td class="followers">6</td>
-              <td class="remove"><button>Remover</button></td>
-            </tr>
-
-            <tr>
-              <td class="user">
-                <img
-                  src="https://github.com/viviansanchez.png"
-                  alt="Imagem de viviansanchez"
-                />
-                <a href="https://github.com/viviansanchez" target="_blank">
-                  <p>Vivian Sanchez</p>
-                  <span>/viviansanchez</span>
-                </a>
-              </td>
-              <td class="repositories">44</td>
-              <td class="followers">6</td>
-              <td class="remove"><button>Remover</button></td>
-            </tr>
-          </tbody>
+          <tbody class="hide"></tbody>
         </table>
 
-        <div class="no-favorites-screen hide">
+        <div class="no-favorites-screen">
           <div class="no-favorites-screen-wrapper">
             <img
               src="./assets/images/background-star.svg"
